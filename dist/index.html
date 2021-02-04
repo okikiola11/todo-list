@@ -4,8 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Todo list </title>
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+      data-auto-a11y="true"></script>
 </head>
 <body>
-  
+  <main id="container">
+    <div class="header">
+      <nav class="nav">Things to do</nav>
+    </div>
+    <div class="wrapper">
+      <div class="side-nav">
+        <h2>Things to do</h2>
+
+        <h3 class="side-sub-hdr"><h3><i class="far fa-folder-open"></i>My Tasks</h3>
+      
+        <form id="add-task">
+          <input type="text" placeholder="Add Project" class="task-input">
+        </form>
+
+        <!-- Container for displaying todo list by adding tasks dynamically -->
+        <div class="todo-container">
+          <ul class="todo-list"></ul>
+        </div>
+        
+      </div>
+
+      <div class="content-info">
+        <div>Topics appear here</div>
+      </div>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
 </body>
 </html>
