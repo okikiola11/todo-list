@@ -5,10 +5,13 @@ const todoList = document.querySelector('.todo-list');
 const todoButton = document.querySelector('.todo-button');
 const taskInfo = document.querySelector('.task-info');
 const newTodo = document.createElement('li');
+const addTaskIcon = document.querySelector('.add-task-icon');
+const modal = document.querySelector('#modal');
 
 //Event Listeners
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', getSingleTodoItem);
+addTaskIcon.addEventListener('click', addNewTask);
 
 // Functions
 
@@ -31,11 +34,19 @@ function addTodo(event) {
   // Clear todo Input value
   todoInput.value = "";
 }
+modal.classList.add('display');
 
 function getSingleTodoItem(e) {
   const show = document.createElement('div');
   show.appendChild(newTodo);
 
   taskInfo.appendChild(show);
+  addNewTask();
+}
+
+function addNewTask() {
+  // const createNewTaskModalBox = document.createElement('div');
+  addTaskIcon.appendChild(modal);
+  console.log(addTaskIcon);
 
 }
