@@ -66,3 +66,14 @@ form input, form button{
   min-width: 40%;
   list-style: none;
 }
+
+#add-task {
+  display: flex;
+}
+
+.todo-item {
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-top: 4px;
+}
