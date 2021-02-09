@@ -8,81 +8,88 @@
       data-auto-a11y="true"></script>
 </head>
 <body>
-  <main id="container">
+  <div class="container" id="container">
     <div class="header">
-      <nav class="nav">Things to do</nav>
+      <h1>ToDo</h1>
+      <h3>
+        Manage your tasks and projects to get more done , with this
+        amazing webapp
+      </h3>
     </div>
-    <div class="wrapper">
-      <div class="side-nav">
-        <h2>Things to do</h2>
-
-        <h3 class="side-sub-hdr"><h3><i class="far fa-folder-open"></i>My Tasks</h3>
-      
-        <form id="add-task">
-          <input type="text" placeholder="Add Project" class="task-input">
-          <button class="todo-button button" type="submit">
-            <i class="fas fa-plus-square"></i>
-          </button>
-        </form>
-
-        <!-- Container for displaying todo list by adding tasks dynamically -->
-        <div class="todo-container">
-          <ul class="todo-list"></ul>
-        </div>
-
+    <div class="projects" id="projects">
+      <div class="display_projects" id="display_projects"></div>
+      <div id="add_project">
+        <button id="show_project_form" class="button">Add project</button>
+      </div>
+    </div>
+    <div class="todolists" id="todolists">
+      <div id="display_todolists"></div>
+      <div id="add_todolist">
+        <button id="show_todo_form" class="button">Add Todolist</button>
+      </div>
+    </div>
+  </div>
+  <div class="none" id="todo_form">
+    <form action="">
+      <button class="close" id="close">X</button>
+      <div class="form-input">
+        <label for="title">Title</label>
+        <input type="text" id="title" />
       </div>
 
-      <div class="content-info">
-        <div class="task-info">
-          
-        </div>
-        <div class="add-task-icon">
-          <button><i class="fas fa-plus-circle button"></i> 
-          </button>
-          
-        </div>
-        <div id="modal">
-          <div class="container">
-            <h2>New Task</h2>
-            <div class="close">+</div>
-            <form data-new-task-form>
-              <label for="name">Task name:</label><br />
-              <input
-                type="text"
-                id="name"
-                data-new-task-input
-                placeholder="Task name"
-                ariel-label="Add new task item"
-                autocomplete="off"
-                required
-              /><br />
-              <label for="due-date">Due date:</label>
-              <input type="date" id="due-date" name="due-date" /><br />
-              <label for="priority">Priority:</label><br />
-              <select name="priority" id="priority">
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option></select
-              ><br />
-              <label for="description">Description:</label><br />
-              <textarea
-                name="description"
-                id="description"
-                cols="30"
-                rows="6"
-              ></textarea
-              ><br />
-              <input type="submit" />
-            </form>
-          </div>
-        </div>
-    
-        <div id="overlay"></div>
-        <div>Todo task appear here</div>
+      <div class="form-input description">
+        <label for="description">Description</label>
+        <textarea id="description"> </textarea>
       </div>
-      
+
+      <div class="form-input priority_select">
+        <label for="priority">Priority</label>
+        <select id="priority">
+          <option value="1">Low</option>
+          <option value="2">Medium</option>
+          <option value="3">High</option>
+          <option value="4">Urgent</option>
+        </select>
+      </div>
+
+      <div class="form-input">
+        <label for="date">Date</label>
+        <input type="date" id="date" />
+      </div>
+
+      <input
+        type="submit"
+        name="create_todo"
+        value="Add"
+        class="createtodo_buttons"
+        id="create_todo"
+      />
+    </form>
+  </div>
+  <div class="none" id="project_form">
+    <form action="">
+      <button class="close" id="close_pr">X</button>
+      <div class="form-input">
+        <label for="name">Project Name</label>
+        <input type="text" id="name" />
+      </div>
+      <input
+        type="submit"
+        name="create_project"
+        value="Add"
+        id="create_project"
+      />
+    </form>
+  </div>
+  <div id="tododetails" class="none">
+    <div class="details">
+      <button class="close" id="close_pr">X</button>
+      <h1 id="details_title"></h1>
+      <h2 id="details_priority"></h2>
+      <h3 id="details_date"></h3>
+      <p id="details_description"></p>
     </div>
-  </main>
+  </div>
 
   <script src="main.js"></script>
 </body>
