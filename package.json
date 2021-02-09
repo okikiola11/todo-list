@@ -19,16 +19,28 @@
     "edit"
   ],
   "author": "Apelehin Okikiola",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/okikiola11/todo-list/issues"
   },
   "homepage": "https://github.com/okikiola11/todo-list#readme",
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "css-loader": "^5.0.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.19.0",
-    "webpack-cli": "^4.4.0"
+    "autoprefixer": "^9.8.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "exports-loader": "^0.7.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }
