@@ -82,6 +82,19 @@ const TodoListItem = (list) => {
     formItems.push(itemsList);
   };
 
+  const edit = (list, id) => {
+    const listObjects = list.items;
+    listObjects.forEach(item => {
+      if (item.id == id) {
+        item.title = liTitle.value;
+        item.description = liDescription.value;
+        item.dueDate = liDueInput.value;
+        item.priority = liPriorityInput.value;
+        item.done = liDone.value;
+      }
+    });
+  };
+
   return {
     li,
     submit,
