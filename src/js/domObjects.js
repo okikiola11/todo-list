@@ -49,6 +49,48 @@ const TodoListItem = (list) => {
       opt.selected = 'selected';
     }
   }
+
+  liDue.appendChild(liDueLbl);
+  liDue.appendChild(liDueInput);
+  liDetailTop.appendChild(liDescription);
+  liDetailBottom.appendChild(liDue);
+  liDetailBottom.appendChild(liPriority);
+  liDetailBottom.appendChild(liBtns);
+  liDetail.appendChild(liDetailTop);
+  liDetail.appendChild(liDetailBottom);
+
+  liToggleDetail.appendChild(liCaret);
+
+  liTitleDiv.appendChild(liCheck);
+  liTitleDiv.appendChild(liTitle);
+  liTitleDiv.appendChild(liDelete);
+  liTitleDiv.appendChild(liToggleDetail);
+
+  liForm.appendChild(liTitleDiv);
+  liForm.appendChild(liDetail);
+
+  li.appendChild(liForm);
+
+  const submit = (formItems) => {
+    const itemsList = { ...todoItems.Items };
+    itemsList.id = generateId(formItems.items);
+    itemsList.title = liTitle.value;
+    itemsList.description = liDescription.value;
+    itemsList.dueDate = liDueInput.value;
+    itemsList.priority = liPriorityInput.value;
+    itemsList.done = liDone.value;
+    formItems.push(itemsList);
+  };
+
+  return {
+    li,
+    submit,
+    title: liTitle,
+    desc: liDescription,
+    due: liDueInput,
+    priority: liPriorityInput,
+    done: liDone,
+  };
 };
 
 const ProjectListItem = (list) => {
