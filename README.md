@@ -15,8 +15,8 @@ To get a local copy up and running follow these simple example steps:
  
 ### Prerequisite
 To get a local copy of the repository please run the following commands on your terminal:
-- cd <folder>
-- git clone <a href="https://github.com/okikiola11/todo-list.git">https://github.com/Godswilly/library</a>
+- cd dist/index.html
+- git clone <a href="https://github.com/okikiola11/todo-list.git">todo list</a>
 - Open the index.html file using your browser
 
 ## Live version
