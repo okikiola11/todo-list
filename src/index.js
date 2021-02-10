@@ -4,6 +4,7 @@ import './css/main.scss';
 import todoItems from './js/todoItem';
 import domItems from './js/domObjects';
 
+
 let projectList;
 
 if (localStorage.getItem('projectlist')) {

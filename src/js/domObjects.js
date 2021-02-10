@@ -1,119 +1,8 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-use-before-define */
 import todoItems from './todoItem';
+import TodoListItem from './refactor';
 
-const TodoListItem = (list) => {
-  const liDone = false;
-  const li = document.createElement('li');
-  const liForm = document.createElement('form');
-
-  const liTitleDiv = document.createElement('div');
-  const liTitle = document.createElement('input');
-  liTitle.required = true;
-  liTitle.type = 'text';
-  liTitle.placeholder = 'Enter a todo task title';
-  const liCheck = document.createElement('i');
-  const liDelete = document.createElement('i');
-  const liCaret = document.createElement('i');
-  const liToggleDetail = document.createElement('a');
-
-  const liDetail = document.createElement('div');
-  const liDetailTop = document.createElement('div');
-  const liDescription = document.createElement('textarea');
-  liDescription.placeholder = 'Enter todo task details';
-
-  const liDetailBottom = document.createElement('div');
-  const liDue = document.createElement('div');
-  const liDueInput = document.createElement('input');
-  liDueInput.type = 'date';
-  liDueInput.value = new Date().toISOString().substring(0, 10);
-  const liDueLbl = document.createElement('label');
-  liDueLbl.innerHTML = 'Due:';
-
-  const liPriority = document.createElement('div');
-  const liPriorityLbl = document.createElement('label');
-  liPriorityLbl.innerHTML = 'Priority';
-  const liPriorityInput = document.createElement('select');
-
-  const liBtns = document.createElement('div');
-  const saveBtnIcon = document.createElement('i');
-  const saveBtn = document.createElement('button');
-  saveBtn.type = 'submit';
-  const cancelBtn = document.createElement('i');
-
-  for (let indexValue = 1; indexValue < 5; indexValue += 1) {
-    const opt = document.createElement('option');
-    opt.innerHTML = indexValue;
-    liPriorityInput.appendChild(opt);
-    if(index === 4) {
-      opt.selected = 'selected';
-    }
-  }
-
-  liDue.appendChild(liDueLbl);
-  liDue.appendChild(liDueInput);
-  liDetailTop.appendChild(liDescription);
-  liDetailBottom.appendChild(liDue);
-  liDetailBottom.appendChild(liPriority);
-  liDetailBottom.appendChild(liBtns);
-  liDetail.appendChild(liDetailTop);
-  liDetail.appendChild(liDetailBottom);
-
-  liToggleDetail.appendChild(liCaret);
-
-  liTitleDiv.appendChild(liCheck);
-  liTitleDiv.appendChild(liTitle);
-  liTitleDiv.appendChild(liDelete);
-  liTitleDiv.appendChild(liToggleDetail);
-
-  liForm.appendChild(liTitleDiv);
-  liForm.appendChild(liDetail);
-
-  li.appendChild(liForm);
-
-  const submit = (formItems) => {
-    const itemsList = { ...todoItems.Items };
-    itemsList.id = generateId(formItems.items);
-    itemsList.title = liTitle.value;
-    itemsList.description = liDescription.value;
-    itemsList.dueDate = liDueInput.value;
-    itemsList.priority = liPriorityInput.value;
-    itemsList.done = liDone.value;
-    formItems.push(itemsList);
-  };
-
-  const edit = (list, id) => {
-    const listObjects = list.items;
-    listObjects.forEach(item => {
-      if (item.id == id) {
-        item.title = liTitle.value;
-        item.description = liDescription.value;
-        item.dueDate = liDueInput.value;
-        item.priority = liPriorityInput.value;
-        item.done = liDone.value;
-      }
-    });
-  };
-
-  const deleteListItems = (list, id) => {
-    const listObjects = list.items;
-    listObjects.forEach(item => {
-      if (item.id == id) {
-        listObjects.splice(listObjects.indexOf(item), 1);
-      }
-    });
-  };
-
-  return {
-    li,
-    submit,
-    title: liTitle,
-    desc: liDescription,
-    due: liDueInput,
-    priority: liPriorityInput,
-    done: liDone,
-  };
-};
 
 const ProjectListItem = (list) => {
   const btn = document.createElement('button');
@@ -126,7 +15,14 @@ const ProjectListItem = (list) => {
   submit.classList = 'd-none';
   btn.appendChild(btnForm);
   btnForm.appendChild(btnName);
- 
+  btnForm.appendChild(submit);
+
+  const startEdit = () => {
+    setTimeout(() => {
+      btnName.focus();
+    }, 100);
+  };
+
   btnForm.addEventListener('submit', () => {
     const newProject = { ...todoItems.List };
     newProject.name = btnName.value;
@@ -134,15 +30,18 @@ const ProjectListItem = (list) => {
     list.items.push(newProject);
 
     const mainSection = document.getElementById('main-section');
-    
-    const todo = TodoList(newProject);
-    mainSection.innerHTML = '';
-    mainSection.append(todo);
-    
+    setTimeout(() => {
+      const todo = TodoList(newProject);
+      mainSection.innerHTML = '';
+      mainSection.append(todo);
+    }, 100);
+
+
+    localStorage.setItem('projectlist', JSON.stringify(list));
   });
 
   return {
-    btn, name: btnName, form: btnForm,
+    startEdit, btn, name: btnName, form: btnForm,
   };
 };
 
@@ -180,7 +79,6 @@ const ProjectList = (list) => {
   return listNode;
 };
 
-
 const TodoList = (list) => {
   const listNode = document.createElement('div');
   const header = listHeader(list.name);
@@ -191,18 +89,19 @@ const TodoList = (list) => {
 
   header.addButton.addEventListener('click', () => {
     const li = TodoListItem(list);
-    if(!actualList.querySelector('li[data-new=true]')) {
+    if (!actualList.querySelector('li[data-new=true]')) {
       actualList.insertBefore(li.li, actualList.firstChild);
       li.li.dataset.new = true;
+      li.startEdit();
     }
   });
 
   return listNode;
-}
+};
 
 const listHeader = (caption) => {
   const container = document.createElement('div');
-  container.className = ' list-header';
+  container.classList = ' list-header d-flex justify-content-between align-items-center p-1 rounded-pill';
   const title = document.createElement('h3');
   title.classList = 'text-center w-100 m-0';
   title.innerHTML = caption;
@@ -274,4 +173,4 @@ const renderList = (ul, itemList, type = 'todo') => {
   });
 };
 
-export default { TodoListItem, TodoList, ProjectList };
+export default { TodoList, ProjectList };
