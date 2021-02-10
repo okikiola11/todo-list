@@ -10,7 +10,7 @@ const ProjectListItem = (list) => {
   const submit = document.createElement('button');
   submit.type = 'submit';
   const btnName = document.createElement('input');
-  btn.classList = 'btn btn-info rounded-pill text-white p-1 m-1';
+  btn.classList = 'btn btn-info text-white p-1 m-1';
   btnName.classList = 'project-name w-100 font-weight-bold text-white';
   submit.classList = 'd-none';
   btn.appendChild(btnForm);
@@ -101,7 +101,7 @@ const TodoList = (list) => {
 
 const listHeader = (caption) => {
   const container = document.createElement('div');
-  container.classList = ' list-header d-flex justify-content-between align-items-center p-1 rounded-pill';
+  container.classList = ' list-header d-flex justify-content-between align-items-center p-1';
   const title = document.createElement('h3');
   title.classList = 'text-center w-100 m-0';
   title.innerHTML = caption;
