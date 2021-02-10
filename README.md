@@ -1,61 +1,54 @@
-# To-Do List
+# TODO LIST APPLICATION
 
-> This is a JS To-Do list app where users can add projects and there corresponding task lists they like to work on.
+This is a todo application where users can create, edit, update and delete a todo or task under a specific project title.
 
-![screenshot](./todo-list.png)
+![screenshot](asset/images/screenshot.png)
 
 ## Built With
-
-- JavaScript, HTML & CSS
+- Javascript
 - Bootstrap
-
-## Live Demo
-
-[Live Demo Link](https://js-todoapp.netlify.app/ )
-
+- ESLINT
+- Webpack
 
 ## Getting Started
+To get a local copy up and running follow these simple example steps:
+ 
+### Prerequisite
+To get a local copy of the repository please run the following commands on your terminal:
+- cd <folder>
+- git clone <a href="https://github.com/okikiola11/todo-list.git">https://github.com/Godswilly/library</a>
+- Open the index.html file using your browser
 
-To get a local copy up and running follow these simple example steps.
-
-To get a local copy up and running follow these simple example steps.
-- `git clone git@github.com:trekab/js-todo-app.git`
-
-Then you browse to the folder and exucute the following commands
-- `cd js-todo-app`
-- double click on the `index.html` file to open the game in your browser.
-
-### Instructions:
-- Click the PLUS button to ADD a project.
-- Type the project name in the displayed input and press enter.
-- Click the PLUS button in the project section to add project tasks.
-- Double click on the titles to edit them.
-
-### Future features:
-- Add tooltips to make the app more usable.
+## Live version
+<a href="https://rawcdn.githack.com/Godswilly/library/ae3a2e89b81f1dcf608a18e51936a6ad32ddfec4/index.html">Click here</a>
 
 ## Authors
+- Okikiola Apelehin
+- Kalu Agu Kalu
 
-👤 **Treasure Kabareebe**
+# Author 1
+- Github: [@okikiola11](https://github.com/okikiola11)
+- Twitter: [@Kikiolla3](https://twitter.com/Kikiolla3)
+- Linkedin: [@okikiola-apelehin](https://www.linkedin.com/in/okikiola-apelehin-459008122/)
 
-- Github: [@trekab](https://github.com/trekab)
-- Twitter: [@TKabareebe](https://twitter.com/TKabareebe)
-- Linkedin: [Treasure Kabareebe](https://www.linkedin.com/in/treasure-kabareebe/)
-
-👤 **Angel Cordova** 
-
-- Github: [@aecordova](https://github.com/aecordova) 
-- Linkedin: [Angel Cordova](https://www.linkedin.com/in/ae-cordova/)
+# Author 2
+- Github: https://github.com/Godswilly
+- LinkedIn: https://www.linkedin.com/in/kalu-agu-kalu/
+- Twitter: https://twitter.com/KaluAguKalu17
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/okikiola11/todo-list/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Google
 
 ## 📝 License
 
