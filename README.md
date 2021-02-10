@@ -2,7 +2,7 @@
 
 This is a todo application where users can create, edit, update and delete a todo or task under a specific project title.
 
-![screenshot](asset/images/screenshot.png)
+![screenshot](screenshot.png)
 
 ## Built With
 - Javascript
@@ -20,7 +20,7 @@ To get a local copy of the repository please run the following commands on your 
 - Open the index.html file using your browser
 
 ## Live version
-<a href="https://rawcdn.githack.com/Godswilly/library/ae3a2e89b81f1dcf608a18e51936a6ad32ddfec4/index.html">Click here</a>
+<a href="https://rawcdn.githack.com/okikiola11/todo-list/bd0112571d0fad69ee80e88d137c2d5ac2239c96/dist/index.html">Click here</a>
 
 ## Authors
 - Okikiola Apelehin
