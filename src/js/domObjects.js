@@ -2,6 +2,55 @@
 /* eslint-disable no-use-before-define */
 import todoItems from './todoItem';
 
+const TodoListItem = (list) => {
+  const liDone = false;
+  const li = document.createElement('li');
+  const liForm = document.createElement('form');
+
+  const liTitleDiv = document.createElement('div');
+  const liTitle = document.createElement('input');
+  liTitle.required = true;
+  liTitle.type = 'text';
+  liTitle.placeholder = 'Enter a todo task title';
+  const liCheck = document.createElement('i');
+  const liDelete = document.createElement('i');
+  const liCaret = document.createElement('i');
+  const liToggleDetail = document.createElement('a');
+
+  const liDetail = document.createElement('div');
+  const liDetailTop = document.createElement('div');
+  const liDescription = document.createElement('textarea');
+  liDescription.placeholder = 'Enter todo task details';
+
+  const liDetailBottom = document.createElement('div');
+  const liDue = document.createElement('div');
+  const liDueInput = document.createElement('input');
+  liDueInput.type = 'date';
+  liDueInput.value = new Date().toISOString().substring(0, 10);
+  const liDueLbl = document.createElement('label');
+  liDueLbl.innerHTML = 'Due:';
+
+  const liPriority = document.createElement('div');
+  const liPriorityLbl = document.createElement('label');
+  liPriorityLbl.innerHTML = 'Priority';
+  const liPriorityInput = document.createElement('select');
+
+  const liBtns = document.createElement('div');
+  const saveBtnIcon = document.createElement('i');
+  const saveBtn = document.createElement('button');
+  saveBtn.type = 'submit';
+  const cancelBtn = document.createElement('i');
+
+  for (let indexValue = 1; indexValue < 5; indexValue += 1) {
+    const opt = document.createElement('option');
+    opt.innerHTML = indexValue;
+    liPriorityInput.appendChild(opt);
+    if(index === 4) {
+      opt.selected = 'selected';
+    }
+  }
+};
+
 const ProjectListItem = (list) => {
   const btn = document.createElement('button');
   const btnForm = document.createElement('form');
@@ -26,7 +75,6 @@ const ProjectListItem = (list) => {
     mainSection.innerHTML = '';
     mainSection.append(todo);
     
-
   });
 
   return {

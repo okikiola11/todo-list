@@ -12,7 +12,7 @@ if (localStorage.getItem('projectlist')) {
   projectList = todoItems.List;
   projectList.name = 'Projects';
 }
-localStorage.setItem('projectlist', JSON.stringify(projectList));
+// localStorage.setItem('projectlist', JSON.stringify(projectList));
 
 const sideBar = document.getElementById('left-sidebar');
 sideBar.appendChild(domItems.ProjectList(projectList));
