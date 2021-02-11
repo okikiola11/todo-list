@@ -1,6 +1,8 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-use-before-define */
+/* eslint-disable import/no-cycle */
 import todoItems from './todoItem';
+import generateId from './domObjects';
 
 const TodoListItem = (list) => {
   const liDone = false;

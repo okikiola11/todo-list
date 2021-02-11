@@ -1,5 +1,6 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-use-before-define */
+/* eslint-disable import/no-cycle */
 import todoItems from './todoItem';
 import TodoListItem from './refactor';
 
@@ -9,7 +10,7 @@ const ProjectListItem = (list) => {
   const submit = document.createElement('button');
   submit.type = 'submit';
   const btnName = document.createElement('input');
-  btn.classList = 'btn btn-info text-white p-1 m-1';
+  btn.classList = 'btn btn-info rounded-pill text-white p-1 m-1';
   btnName.classList = 'project-name w-100 font-weight-bold text-white';
   submit.classList = 'd-none';
   btn.appendChild(btnForm);
@@ -108,7 +109,8 @@ const listHeader = (caption) => {
   addButton.classList = 'p-2 d-block';
   addButton.href = '#';
   const icon = document.createElement('i');
-  icon.classList = 'plus-btn fas fa-plus-circle';
+  // icon.classList = 'plus-btn fas fa-plus-circle';
+  icon.innerText = '+';
 
   addButton.appendChild(icon);
   container.appendChild(title);
@@ -172,4 +174,4 @@ const renderList = (ul, itemList, type = 'todo') => {
   });
 };
 
-export default { TodoList, ProjectList };
+export default { TodoList, ProjectList, generateId };
