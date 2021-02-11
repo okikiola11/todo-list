@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable import/no-cycle */
 import todoItems from './todoItem';
-import TodoListItem from './refactor';
+import TodoListItem from './listItem';
 
 const ProjectListItem = (list) => {
   const btn = document.createElement('button');
