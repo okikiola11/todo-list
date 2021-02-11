@@ -1,3 +1,6 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable no-use-before-define */
+import todoItems from './todoItem';
 
 const TodoListItem = (list) => {
   const liDone = false;
@@ -131,23 +134,6 @@ const TodoListItem = (list) => {
       }
     });
   };
-  const updateList = (list) => {
-    let projectList;
-
-    if (localStorage.getItem('projectlist')) {
-      projectList = JSON.parse(localStorage.getItem('projectlist'));
-    } else {
-      projectList = todoItems.List;
-      projectList.name = 'Projects';
-    }
-    projectList.items.forEach((element) => {
-      if (element.name === list.name) {
-        element.items = [...list.items];
-      }
-    });
-    localStorage.setItem('projectlist', JSON.stringify(projectList));
-  };
-
 
   const deleteListItem = (list, id) => {
     const listObjects = list.items;
@@ -185,6 +171,23 @@ const TodoListItem = (list) => {
     }
     updateList(list);
   });
+
+  const updateList = (list) => {
+    let projectList;
+
+    if (localStorage.getItem('projectlist')) {
+      projectList = JSON.parse(localStorage.getItem('projectlist'));
+    } else {
+      projectList = todoItems.List;
+      projectList.name = 'Projects';
+    }
+    projectList.items.forEach((element) => {
+      if (element.name === list.name) {
+        element.items = [...list.items];
+      }
+    });
+    localStorage.setItem('projectlist', JSON.stringify(projectList));
+  };
 
   return {
     li,

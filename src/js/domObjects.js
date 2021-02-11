@@ -3,7 +3,6 @@
 import todoItems from './todoItem';
 import TodoListItem from './refactor';
 
-
 const ProjectListItem = (list) => {
   const btn = document.createElement('button');
   const btnForm = document.createElement('form');
