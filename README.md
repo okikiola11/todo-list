@@ -20,7 +20,7 @@ To get a local copy of the repository please run the following commands on your 
 - Open the index.html file using your browser
 
 ## Live version
-<a href="https://rawcdn.githack.com/okikiola11/todo-list/bd0112571d0fad69ee80e88d137c2d5ac2239c96/dist/index.html">Click here</a>
+<a href="https://rawcdn.githack.com/okikiola11/todo-list/15564fa6018f561a510876e9c834915555e0fc7e/dist/index.html">Click here</a>
 
 ## Authors
 - Okikiola Apelehin
