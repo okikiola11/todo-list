@@ -1,3 +1,5 @@
+import './assets/style.css';
+
 import { AddTodolist, removeTodolist } from './addremove';
 import Todolist, { displaytodolists } from './createtodolist';
 import { Project, displayprojects } from './createproject';
