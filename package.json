@@ -4,10 +4,11 @@
   "description": "This project uses modularized code to show ES6 class keyword, ES6 modules, and webpack.",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
-    "build": "webpack",
-    "watch": "webpack --mode development --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open",
+    "watch": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",
@@ -19,36 +20,14 @@
     "edit"
   ],
   "author": "Apelehin Okikiola",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/okikiola11/todo-list/issues"
   },
   "homepage": "https://github.com/okikiola11/todo-list#readme",
-  "devDependencies": {
-    "autoprefixer": "^9.8.0",
-    "babel-eslint": "^10.1.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.5.3",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "exports-loader": "^0.7.0",
-    "file-loader": "^6.0.0",
-    "html-webpack-plugin": "^4.3.0",
-    "postcss-loader": "^3.0.0",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.2.1",
-    "stylelint": "^13.3.3",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.17.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
-  },
   "dependencies": {
-    "bootstrap": "^4.5.0",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
