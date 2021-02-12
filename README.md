@@ -21,7 +21,7 @@ To get a local copy of the repository please run the following commands on your 
 
 ## How to run
 
- -npm run watch
+ -npm run start
 
 ## Live version
 <a href="https://rawcdn.githack.com/okikiola11/todo-list/8848a8ebfdab31fe9665bcd178fde84f97af0ffd/dist/index.html">Click here</a>
