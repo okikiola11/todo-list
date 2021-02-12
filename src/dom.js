@@ -9,6 +9,7 @@ const displayProjects = document.getElementById('display_projects');
 const displayTodolists = document.getElementById('display_todolists');
 const tododetails = document.getElementById('tododetails');
 const details = document.querySelector('.details');
+
 addproject.addEventListener('click', () => {
   projectform.className = 'project_form';
 });
