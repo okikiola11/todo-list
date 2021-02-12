@@ -2,7 +2,7 @@
 
 This is a todo application where users can create, edit, update and delete a todo or task under a specific project title.
 
-![screenshot](screenshot.png)
+![Screenshot](Screenshot_1.png)
 
 ## Built With
 - Javascript
@@ -19,8 +19,12 @@ To get a local copy of the repository please run the following commands on your 
 - git clone <a href="https://github.com/okikiola11/todo-list.git">todo list</a>
 - Open the index.html file using your browser
 
+## How to run
+
+ -npm run watch
+
 ## Live version
-<a href="https://rawcdn.githack.com/okikiola11/todo-list/15564fa6018f561a510876e9c834915555e0fc7e/dist/index.html">Click here</a>
+<a href="https://rawcdn.githack.com/okikiola11/todo-list/8848a8ebfdab31fe9665bcd178fde84f97af0ffd/dist/index.html">Click here</a>
 
 ## Authors
 - Okikiola Apelehin
