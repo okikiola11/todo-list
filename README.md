@@ -2,7 +2,7 @@
 
 This is a todo application where users can create, edit, update and delete a todo or task under a specific project title.
 
-![Screenshot](../src/assets/images/Screenshot_1.png)
+![screenshot](screenshot.png)
 
 ## Built With
 - Javascript
