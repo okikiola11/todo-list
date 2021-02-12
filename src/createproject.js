@@ -14,6 +14,6 @@ const displayprojects = (project, displayProjects) => {
   projectName.className = 'project_name';
   projectName.innerHTML = project.name;
   projectContainer.appendChild(projectName);
-}
+};
 
 export { Project, displayprojects };
