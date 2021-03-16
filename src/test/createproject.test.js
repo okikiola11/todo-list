@@ -6,13 +6,22 @@ describe('Create a project', () => {
     expect(project).toBeDefined();
   });
 
+  const project = createProject.Project('coding', [], 0);
+
   test('return project name', () => {
-    const project = createProject.Project('study', [], 0);
-    expect(project.name).toEqual('study');
+    expect(project.name).toEqual('coding');
+  });
+
+  test('return project name type', () => {
+    expect(typeof project.name).toEqual('string');
   });
 
   test('return project todos type', () => {
-    const project = createProject.Project('study', [], 0);
     expect(typeof project.todolist).toEqual('object');
   });
+
+  test('return project todos type', () => {
+    expect(typeof project.id).toEqual('number');
+  });
 })
+
