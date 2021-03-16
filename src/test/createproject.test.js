@@ -1,14 +1,15 @@
-const Project = require('../createproject');
-
-test('createproject function exists', () => {
-  expect(Project).toBeDefined();
-});
+//const Project = require('../createproject');
+const createProject = require('../createproject');
 
 describe('Create a project', () => {
+  test('Project function exists', () => {
+    const project = createProject.Project
+    expect(project).toBeDefined();
+  });
 
   test('return project name', () => {
-    //const project = Project('study', 0);
-    expect(Project).toEqual('study');
+    const project = createProject.Project('study', [], 0);
+    expect(project.name).toEqual('study');
   });
 
   // test('return project todos type', () => {
