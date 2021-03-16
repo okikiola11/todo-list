@@ -20,8 +20,14 @@ describe('Create a project', () => {
     expect(typeof project.todolist).toEqual('object');
   });
 
-  test('return project todos type', () => {
+  test('return project id type', () => {
     expect(typeof project.id).toEqual('number');
   });
 })
 
+describe('display projects', () => {
+  test('Create Project function exists', () => {
+    const displayProjectTest = createProject.displayprojects
+    expect(displayProjectTest).toBeDefined();
+  });  
+})
