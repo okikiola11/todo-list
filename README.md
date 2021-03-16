@@ -2,7 +2,7 @@
 
 This is a todo application where users can create, edit, update and delete a todo or task under a specific project title.
 
-![screenshot](screenshot.png)
+![screenshot](src/assets/screenshot.png)
 
 ## Built With
 - Javascript
@@ -20,8 +20,12 @@ To get a local copy of the repository please run the following commands on your 
 - Open the index.html file using your browser
 
 ## How to run
+- npm run start
 
- -npm run start
+## How to run test
+- npm run test-watch
+
+![screenshot](src/assets/screenshot2.png)
 
 ## Live version
 <a href="https://rawcdn.githack.com/okikiola11/todo-list/8848a8ebfdab31fe9665bcd178fde84f97af0ffd/dist/index.html">Click here</a>

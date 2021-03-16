@@ -4,7 +4,8 @@
   "description": "This project uses modularized code to show ES6 class keyword, ES6 modules, and webpack.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test-watch": "jest --watch */test",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open"
@@ -30,11 +31,13 @@
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.13.10",
     "babel-eslint": "^10.1.0",
     "css-loader": "^5.0.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
+    "jest": "^26.6.3",
     "style-loader": "^2.0.0",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
