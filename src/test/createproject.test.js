@@ -1,4 +1,3 @@
-//const Project = require('../createproject');
 const createProject = require('../createproject');
 
 describe('Create a project', () => {
@@ -12,8 +11,8 @@ describe('Create a project', () => {
     expect(project.name).toEqual('study');
   });
 
-  // test('return project todos type', () => {
-  //   const project = createProject('study');
-  //   expect(typeof project.todos).toEqual('object');
-  // });
+  test('return project todos type', () => {
+    const project = createProject.Project('study', [], 0);
+    expect(typeof project.todolist).toEqual('object');
+  });
 })
